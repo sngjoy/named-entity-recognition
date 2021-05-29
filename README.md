@@ -36,7 +36,7 @@ http://127.0.0.1:8000/
 
 #### Step 4:
 To POST file (.json):
-1. Use cURL
+**Option 1.** Use cURL
 ```
 curl -X 'POST' \
   'http://127.0.0.1:8000/extract' \
@@ -44,7 +44,7 @@ curl -X 'POST' \
   -H 'Content-Type: multipart/form-data' \
   -F 'file=@<FILENAME>.json; type=application/json'
 ```
-2. Use the Swagger UI directly from browser
+**Option 2.** Use the Swagger UI directly from browser
 
 Navigate to endpoint `/docs`
 ```
@@ -64,3 +64,6 @@ Spacy supports the following entity types:
 <p align="center">
     Entity recognised by spaCy core model <a href="https://spacy.io/api/data-formats#named-entities">(source)</a>
 </p>
+
+## Author
+Joy Sng
