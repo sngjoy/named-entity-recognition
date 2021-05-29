@@ -3,18 +3,25 @@ Web server for spaCy NER
 """
 import json
 
-from fastapi import FastAPI, File, HTTPException, UploadFile, status
+from fastapi import FastAPI, File, HTTPException, Request, UploadFile, status
+from fastapi.templating import Jinja2Templates
 
 from src.api_schemas import Entities, ModelInfo
 from src.ner import SpacyNER
 
 app = FastAPI()
+templates = Jinja2Templates(directory="src/templates")
+
+
+@app.get("/")
+async def index(request: Request):
+    # Main page
+    return templates.TemplateResponse("index.html", {"request": request})
 
 
 @app.get("/info", response_model=ModelInfo)
 async def info() -> json:
-    """Returns information about the pretrained feature extractor"""
-
+    """Returns information about the pretrained NER extractor"""
     return SpacyNER().settings
 
 

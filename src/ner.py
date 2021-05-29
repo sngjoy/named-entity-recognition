@@ -16,7 +16,6 @@ logging.basicConfig(
 NLP_LIBRARY = "spacy"
 MODEL_NAME = "en_core_web_sm"
 
-
 logger = logging.getLogger(NLP_LIBRARY + "-" + MODEL_NAME)
 logger.info("Loading model weights from %s", NLP_LIBRARY)
 model = spacy.load(MODEL_NAME)
