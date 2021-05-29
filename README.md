@@ -15,4 +15,6 @@ Spacy supports the following entity types:
   <img src="media/spacy_entities.png" />
 </p>
 
-<center> Entity recognised by spaCy core model <a href="https://spacy.io/api/data-formats#named-entities">(source)</a></center>
+<p align="center">
+    Entity recognised by spaCy core model <a href="https://spacy.io/api/data-formats#named-entities">(source)</a>
+</p>
