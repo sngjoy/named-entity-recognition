@@ -13,13 +13,13 @@ logging.basicConfig(
     level=logging.INFO,
 )
 
-nlp_library = "spacy"
-model_name = "en_core_web_sm"
+NLP_LIBRARY = "spacy"
+MODEL_NAME = "en_core_web_sm"
 
 
-logger = logging.getLogger(nlp_library + "-" + model_name)
-logger.info("Loading model weights from %s", nlp_library)
-model = spacy.load(model_name)
+logger = logging.getLogger(NLP_LIBRARY + "-" + MODEL_NAME)
+logger.info("Loading model weights from %s", NLP_LIBRARY)
+model = spacy.load(MODEL_NAME)
 
 
 @dataclass
@@ -29,8 +29,8 @@ class SpacyNER:
     to extract named entities of text
     """
 
-    nlp_library: str = nlp_library
-    model_name: str = model_name
+    nlp_library: str = NLP_LIBRARY
+    model_name: str = MODEL_NAME
     settings: Dict[str, str] = None
 
     def __post_init__(self):

@@ -1,4 +1,3 @@
-# pylint: skip-file
 """
 Web server for spaCy NER
 """
