@@ -18,15 +18,15 @@ async def info() -> json:
     return SpacyNER().settings
 
 
-@app.post("/predict", response_model=Entities)
-async def predict(file: UploadFile = File(...)) -> json:
-    """Get embeddings for text
+@app.post("/extract", response_model=Entities)
+async def extract(file: UploadFile = File(...)) -> json:
+    """Extract entities from text
 
     Args:
-        text (Union[str, List[str]]): text to encode
+        file (UploadFile, optional): uploaded json file.
 
     Returns:
-        JSON: Entities extracted from texts
+        json: named entities from each of the uploaded articles
     """
     if file.content_type != "application/json":
         raise HTTPException(
