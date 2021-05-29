@@ -54,7 +54,7 @@ class SpacyNER:
         logger.info("Extracting entities...")
 
         if not isinstance(data, dict):
-            pass
+            raise TypeError("input must be a dictionary")
 
         entities = {}
         for index, news in data.items():
@@ -62,3 +62,46 @@ class SpacyNER:
             entities[index] = [(ent.text, ent.label_) for ent in doc.ents]
 
         return entities
+
+    @staticmethod
+    def count(data: Dict) -> Dict[str, Dict]:
+        """Count of the different entities of each unique news article
+
+        Args:
+            data (Dict): text index and text pair
+
+        Returns:
+            Dict[str, Dict]: text index with entities and counts
+        """
+        logger.info("Counting entities...")
+
+        if not isinstance(data, dict):
+            raise TypeError("input must be a dictionary")
+
+        article_entities_count = {
+            "ORG": 0,
+            "MONEY": 0,
+            "EVENT": 0,
+            "PRODUCT": 0,
+            "DATE": 0,
+            "LANGUAGE": 0,
+            "LOC": 0,
+            "LAW": 0,
+            "WORK_OF_ART": 0,
+            "QUANTITY": 0,
+            "GPE": 0,
+            "PERCENT": 0,
+            "NORP": 0,
+            "PERSON": 0,
+            "CARDINAL": 0,
+            "ORDINAL": 0,
+            "FAC": 0,
+            "TIME": 0,
+        }
+        overall_count = {}
+        for index, news in data.items():
+            doc = model(data[str(index)][list(news.keys())[0]])
+            for ent in doc.ents:
+                article_entities_count[ent.label_] += 1
+            overall_count[index] = article_entities_count
+        return overall_count
