@@ -34,8 +34,9 @@ Navigate to URL and run the app!
 http://127.0.0.1:8000/
 ```
 
-#### Step 4:
+#### Step 5:
 To POST file (.json):
+
 **Option 1.** Use cURL
 ```
 curl -X 'POST' \
