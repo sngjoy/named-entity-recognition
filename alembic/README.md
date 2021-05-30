@@ -17,15 +17,13 @@ alembic revision -m "init"
 ```
 This creates a script in `alembic/versions` directory.
 
-#### Step 4
-Create an `upgrade` function in the script.
+First create an `upgrade` function in the script.
 This creates a table with the model's name and defines the columns which match the model.
 
-### Step 5
-Create a `downgrade` function.
+Next, create a `downgrade` function.
 This will be used to revert migration if needed.
 
-### Step 6
+#### Step 3
 Run the migration.
 ```
 alembic upgrade head

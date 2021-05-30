@@ -1,7 +1,6 @@
 """init
 
 Revision ID: 0c2332699be2
-Revises: df2a1a9d1312
 Create Date: 2021-05-30 08:07:14.499355
 
 """
@@ -11,7 +10,7 @@ from alembic import op
 
 # revision identifiers, used by Alembic.
 revision = "0c2332699be2"
-down_revision = "df2a1a9d1312"
+down_revision = None
 branch_labels = None
 depends_on = None
 
