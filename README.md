@@ -33,30 +33,18 @@ conda env create -f conda.yml
 ```
 
 #### Step 3:
-Run the app!
+Run the app and navigate to the URL!
 ```
 uvicorn src.app_ner:app
 ```
 
-<!-- #### Step 3:
-Build and run the docker image
-```
-docker build -t spacy-ner .
-docker run -it -p 8000:8000 spacy-ner
-``` -->
-
 #### Step 4:
-Navigate to URL
-```
-http://127.0.0.1:8000/
-```
-#### Step 5:
 Spin up PostgreSQL database and run Alembic to initialise the `count_entities` table. (More information about Alembic [here](https://github.com/sngjoy/named_entity_recognition/tree/main/alembic))
 ```
 make run-db
 alembic upgrade head
 ```
-#### Step 6:
+#### Step 5:
 To POST file (.json):
 
 **Option 1.** Use cURL
