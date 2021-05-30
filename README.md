@@ -89,7 +89,7 @@ As stated earlier, the endpoint `/count` will store the results of each unique e
 
 For a better visualisation of the table, the following are the table schema and an example of a table.
 <p align="center">
-  <img src="media/postgresql_schema.png" />
+  <img src="media/postgresql_schema.PNG" />
 </p>
 
 <p align="center">
@@ -97,7 +97,7 @@ For a better visualisation of the table, the following are the table schema and 
 </p>
 <br>
 <p align="center">
-  <img src="media/postgresql_table.png" />
+  <img src="media/postgresql_table.PNG" />
 </p>
 
 <p align="center">
