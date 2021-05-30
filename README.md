@@ -40,7 +40,7 @@ uvicorn src.app_ner:app
 ```
 
 #### Step 4:
-Spin up PostgreSQL database and run Alembic to initialise the `count_entities` table. (More information about Alembic [here](https://github.com/sngjoy/named_entity_recognition/tree/main/alembic))
+Use another terminal to spin up PostgreSQL database and run Alembic at the root of this project folder to initialise the `count_entities` table. (More information about Alembic [here](https://github.com/sngjoy/named_entity_recognition/tree/main/alembic))
 ```
 make run-db
 alembic upgrade head
