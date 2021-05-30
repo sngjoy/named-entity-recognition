@@ -10,8 +10,10 @@ services:
     ports:
       - 5432:5432
 
-  server:
+  app:
     build: .
+    volumes:
+      - .:/home
     command: uvicorn src.app_ner:app --reload --workers 1 --host 0.0.0.0 --port 8000
     ports:
       - 8000:8000
