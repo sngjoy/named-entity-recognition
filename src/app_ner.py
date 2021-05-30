@@ -73,5 +73,5 @@ async def count(file: UploadFile = File(...), db: Session = Depends(get_db)) -> 
         for entity, count in all_counts.items():
             db_create = EntitiesCount(article_id=index, entities=entity, counts=count)
             db.add(db_create)
-    # db.commit()
+            db.commit()
     return {"success": True}
