@@ -30,6 +30,7 @@ Create environment with the required packages.
 
 ```
 conda env create -f conda.yml
+conda activate ner
 ```
 
 #### Step 3:
