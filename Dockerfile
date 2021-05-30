@@ -11,7 +11,7 @@ RUN conda env update -n base -f conda.yml && rm conda.yml
 
 COPY src /home/src
 
-EXPOSE 8000
-USER 1000
+# EXPOSE 8000
+# USER 1000
 
-CMD ["uvicorn", "src.app_ner:app", "--host", "0.0.0.0"]
+# CMD ["uvicorn", "src.app_ner:app", "--host", "0.0.0.0"]
