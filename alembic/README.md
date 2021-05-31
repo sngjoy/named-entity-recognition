@@ -31,5 +31,5 @@ alembic upgrade head
 ## Author
 Joy Sng
 
-## Sources:
+## Sources
 https://alembic.sqlalchemy.org/en/latest/tutorial.html
