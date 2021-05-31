@@ -28,6 +28,8 @@ Run the migration.
 ```
 alembic upgrade head
 ```
+## Author
+Joy Sng
 
 ## Sources:
 https://alembic.sqlalchemy.org/en/latest/tutorial.html
