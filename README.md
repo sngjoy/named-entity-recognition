@@ -7,12 +7,12 @@ The pretrained NLP core model from [spaCy](https://spacy.io/models/en#en_core_we
 
 ## About the App
 The REST API serves 4 endpoints:
-1. `/info` [GET] -
-Retrieve information about the pretrained NER extractor.
-2. `/extract` [POST] -
-Upload `.json` file to extract text and corresponding entities, returns results in json format.
-3. `/count` [POST] -
-Uploads `.json` file to count the number of unique entities of each article, add results to database, returns job status.
+1. `/info` -
+GET information about the pretrained NER extractor.
+2. `/extract` -
+POST `.json` file. Returns text and corresponding entities in json format.
+3. `/count` -
+POST `.json` file. Store count of the unique entities of each article. Returns job status.
 4. `/docs` -
 Interactive Swagger UI
 
