@@ -3,6 +3,8 @@ Alembic is a database migration tool to be used with SQLAlchemy library.
 
 A "migration" is the set of steps needed whenever the structure of the SQLAlchemy models is changed (eg, adding a new attribute) to replicate the changes in the database (eg, add a new column, a new table, etc)
 
+Steps to recreate this folder (not required if you have already cloned this repo)
+
 #### Step 1
 Initialise alembic.
 ```
